@@ -1,19 +1,18 @@
+# Analisador de Logs do Linux (Python)
 
-# Linux Log Analyzer (Python)
+Este projeto é uma ferramenta simples baseada em Python, desenvolvida para analisar logs de autenticação do Linux e identificar tentativas de login falhas que podem indicar ataques de força bruta ou atividades suspeitas.
 
-This project is a simple Python-based tool designed to analyze Linux authentication logs and identify failed login attempts that may indicate brute-force attacks or suspicious activity.
+## O que este projeto faz
+- Analisa entradas de logs de autenticação do Linux (ex.: logins SSH com falha)
+- Extrai endereços IP de origem das tentativas de login falhadas
+- Conta falhas repetidas por endereço IP
+- Gera um relatório simples de segurança
 
-## What this project does
-- Parses Linux authentication log entries (e.g. SSH failed logins)
-- Extracts source IP addresses from failed login attempts
-- Counts repeated failures per IP
-- Generates a simple security report
+## Por que isso é importante para cibersegurança
+Analisar logs de autenticação é uma tarefa comum em ambientes de SOC e equipes Blue Team. Múltiplas tentativas de login falhadas vindas do mesmo endereço IP podem indicar ataques de força bruta ou tentativas de acesso não autorizado.
 
-## Why this matters for cybersecurity
-Analyzing authentication logs is a common task in SOC and Blue Team environments. Repeated failed login attempts from the same IP may indicate brute-force or unauthorized access attempts.
-
-## How to run
-Make sure Python 3 is installed and run:
+## Como executar
+Certifique-se de que o Python 3 está instalado e execute:
 
 ```bash
 python log_analyzer.py
